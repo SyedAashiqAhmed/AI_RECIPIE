@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recipe Suggestions</title>
+</head>
+<body>
+    <h1>Recipe Suggestions</h1>
+    <ul>
+        {% for recipe in recipes %}
+            <li>
+                <strong>{{ recipe.name }}</strong><br>
+                Ingredients: {{ recipe.ingredients | join(", ") }}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
